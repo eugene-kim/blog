@@ -1,8 +1,8 @@
-<h1>Eugene's Blog</h1>
+<h1>a blog about a blog</h1>
 
-<%= link_to "New Post", new_post_path %>
+<%= link_to "New Post", new_post_path, class: "btn btn-primary" %>
 
-<ul>
+<ul class="list-unstyled">
 	<% @posts.each do |post| %>
 		<%= render "post", post:post %>
 	<% end -%>

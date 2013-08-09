@@ -20,7 +20,13 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                              :github => 'anjlab/bootstrap-rails',
+                              :branch => '3.0.0'
+
 gem 'jquery-rails'
+gem 'bootstrap-wysihtml5-rails', :require => 'bootstrap-wysihtml5-rails',
+                                 :git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git'
 
 group :development, :test do
 	gem 'rspec-rails'

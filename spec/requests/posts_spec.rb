@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'Posts' do
-	before do
+	before(:each) do
 		@post = Post.create(title: 'First post!', body:'This is my first post!') 
     visit posts_path
 	end
@@ -48,7 +48,7 @@ describe 'Posts' do
     it 'should delete selected post' do
       find("#post_#{@post.id}").click_link 'Delete'
 
-      expect(page).to have_content "Post has been deleted"
+      expect(page).to have_content "\"#{@post.title}\" has been deleted."
       expect(page).not_to have_content 'First post!'
       expect(page).not_to have_content 'This is my first post!'
     end

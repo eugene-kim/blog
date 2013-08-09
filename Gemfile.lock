@@ -1,3 +1,19 @@
+GIT
+  remote: git://github.com/Nerian/bootstrap-wysihtml5-rails.git
+  revision: 081b8ba0576dbfba2df1d21a46bc83a1e04404c9
+  specs:
+    bootstrap-wysihtml5-rails (0.3.1.21)
+      railties (>= 3.0)
+
+GIT
+  remote: git://github.com/anjlab/bootstrap-rails.git
+  revision: 377c7ee19d13e5a6a0a6a635b596bb13364034e9
+  branch: 3.0.0
+  specs:
+    anjlab-bootstrap-rails (3.0.0.rc1)
+      railties (>= 3.0)
+      sass (>= 3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -130,6 +146,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  anjlab-bootstrap-rails!
+  bootstrap-wysihtml5-rails!
   capybara
   coffee-rails (~> 3.2.1)
   jquery-rails

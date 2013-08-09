@@ -1,6 +1,9 @@
 Blog::Application.routes.draw do
 
+  get "tasks/index"
+
   resources :posts
+  resources :tasks
 
   root :to => 'posts#index'
 
