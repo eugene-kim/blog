@@ -13,3 +13,20 @@
  *= require twitter/bootstrap
  *= require bootstrap-wysihtml5
  */
+
+html {
+	background: transparent;
+}
+
+body {
+	padding-top: 70px;
+	background: gray;
+}
+
+.container {
+	
+}
+
+#params {
+	margin-top: 30px;
+}

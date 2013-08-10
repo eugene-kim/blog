@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Blog</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+	  <title>Blog</title>
+	  <%= stylesheet_link_tag    "application", :media => "all" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+	</head>
 
-<div class="container">
-	<% flash.each do |name, message| %>
-		<div id="flash_<%= name %>" class="alert">
-			<%= message %>
-		</div>
-	<% end %>
+	<body>
+		<div class="container">
 
-	<%= yield %>
+			<% flash.each do |name, message| %>
+				<div id="flash_<%= name %>" class="alert">
+					<%= message %>
+				</div>
+			<% end %>
 
-	<%= debug(params) %>
+			<h1>blog about a blog</h1>
 
-</div>
-</body>
+			<div class="navbar">
+				<ul class="nav navbar-nav">
+					<li class="<%= 'active' if current_page?(posts_path) %>"><%= link_to "Blog", posts_path %></li>
+					<li class="<%= 'active' if current_page?(tasks_path) %>"><%= link_to "TO-DO", tasks_path %></li>
+					<li><%= link_to "Screenshots", "#" %></li>
+					<li><%= link_to "About", "#" %></li>
+				</ul>
+			</div>
+
+			<%= yield %>
+
+			<div id="params">
+				<%= debug(params) %>
+			</div>
+		</div> <!-- end of container -->
+	</body>
 </html>

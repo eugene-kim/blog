@@ -6,17 +6,16 @@
 
 	<div class="form-group">
 		<%= f.text_area :body, class: "wysihtml5 form-control" %>
-
-		<script type="text/javascript">
-		  $('.wysihtml5').each(function(i, elem) {
-    		$(elem).wysihtml5();
-  		});
-		</script>
 	</div>
+
+	<script type="text/javascript">
+	  $('.wysihtml5').each(function(i, elem) {
+			$(elem).wysihtml5();
+		});
+	</script>
 
 	<div class="form-group">
 		<%= f.submit class: "btn btn-primary" %>
 		<%= link_to "Cancel", :back , class: "btn btn-default" %>
 	</div>
 <% end -%>
-
