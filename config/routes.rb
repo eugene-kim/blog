@@ -2,11 +2,13 @@ Blog::Application.routes.draw do
 
   get "tasks/index"
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
+
   resources :tasks
 
   root :to => 'posts#index'
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

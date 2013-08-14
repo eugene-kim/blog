@@ -1,0 +1,12 @@
+<h2><%= @post.title %></h2>
+<h3 class="post_date"><%= post_date @post.created_at %></h3>
+<p><%= raw @post.body %></p>
+<%= link_to "Edit", edit_post_path(@post), class: "btn btn-success btn-xs" %>
+<%= link_to "Delete", @post, method: 'delete',
+														confirm: "Are you sure?",
+														class: "btn btn-danger btn-xs" %>
+
+<h2>Comments</h2>
+
+<%= render "comments/comments", post: @post %>
+<%= render "comments/form",     post: @post %>

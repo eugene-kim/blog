@@ -18,13 +18,17 @@
 
 			<h1>blog about a blog</h1>
 
+
+
 			<div class="navbar">
-				<ul class="nav navbar-nav">
-					<li class="<%= 'active' if current_page?(posts_path) %>"><%= link_to "Blog", posts_path %></li>
-					<li class="<%= 'active' if current_page?(tasks_path) %>"><%= link_to "TO-DO", tasks_path %></li>
-					<li><%= link_to "Screenshots", "#" %></li>
-					<li><%= link_to "About", "#" %></li>
-				</ul>
+			  <div class="navbar-inner">
+			    <ul class="nav">
+				    <li class="<%= 'active' if current_page?(posts_path) %>"><%= link_to "Blog", posts_path %></li>
+						<li class="<%= 'active' if current_page?(tasks_path) %>"><%= link_to "TO-DO", tasks_path %></li>
+						<li><%= link_to "Screenshots", "#" %></li>
+						<li><%= link_to "About", "#" %></li>
+			    </ul>
+			  </div>
 			</div>
 
 			<%= yield %>

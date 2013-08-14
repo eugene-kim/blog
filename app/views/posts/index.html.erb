@@ -1,6 +1,6 @@
 <%= link_to "New Post", new_post_path, class: "btn btn-primary" %>
 
-<ul class="list-unstyled">
+<ul class="unstyled">
 	<% @posts.each do |post| %>
 		<%= render "post", post:post %>
 	<% end -%>

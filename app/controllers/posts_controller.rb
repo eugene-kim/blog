@@ -12,6 +12,10 @@ class PostsController < ApplicationController
 		redirect_to posts_path, notice: "Post was successfully updated"
 	end
 
+	def show
+		@post = Post.find(params[:id])
+	end
+
 	def edit
 		@post = Post.find(params[:id])
 	end
@@ -19,7 +23,7 @@ class PostsController < ApplicationController
 	def update
 		@post = Post.find(params[:id])
 		if @post.update_attributes params[:post]
-			redirect_to posts_path, notice: "\"#{@post.title}\" was successfully updated."		
+			redirect_to posts_path, notice: "\"#{@post.title}\" was successfully updated."
 		else
 			redirect_to :back, notice: "There was an error updating your post."
 		end

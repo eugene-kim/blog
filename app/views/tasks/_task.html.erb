@@ -1,8 +1,6 @@
-<%= form_for task, remote: true do |f| %>
+<%= form_for task, class: "form-inline", remote: true do |f| %>
   <%= f.check_box :complete %>
   <%= f.submit "Update" %>
   <%= f.label task.name %>
   <%= link_to "✖", task, method: :delete, data: {confirm: "Are you sure?"}, remote: true %>
 <% end %>
-<!-- 
-<p class="completed_on"><%= completed_on(task) %></p> -->
